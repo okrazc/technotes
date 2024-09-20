@@ -1,29 +1,29 @@
-## Design Patterns
+# Design Patterns
 
 The Gang of Four (GoF) design patterns refer to 23 foundational design patterns outlined in the book "Design Patterns: Elements of Reusable Object-Oriented Software" written by four authors: Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, who are collectively known as the "Gang of Four." These design patterns are solutions to common problems in software design, particularly in object-oriented programming.
 
 The patterns are grouped into three categories based on their purpose:
 
-## 1. Creational Patterns
+# 1. Creational Patterns
 These patterns are concerned with the creation of objects, providing ways to instantiate them while decoupling the instantiation logic from the client code.
 
-# Abstract Factory: 
+## Abstract Factory: 
 Creates families of related or dependent objects without specifying their concrete classes.
-# Builder: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
-# Factory Method: Defines an interface for creating an object but allows subclasses to alter the type of object that will be created.
-# Prototype: Creates new objects by copying an existing object (the prototype).
-# Singleton: Ensures a class has only one instance and provides a global point of access to it.
-## 2. Structural Patterns
+## Builder: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+## Factory Method: Defines an interface for creating an object but allows subclasses to alter the type of object that will be created.
+## Prototype: Creates new objects by copying an existing object (the prototype).
+## Singleton: Ensures a class has only one instance and provides a global point of access to it.
+# 2. Structural Patterns
 These patterns deal with the composition of classes or objects, forming larger structures while maintaining flexibility and efficiency.
 
-# Adapter: Converts the interface of a class into another interface the client expects.
-# Bridge: Decouples an abstraction from its implementation, allowing them to vary independently.
-# Composite: Composes objects into tree-like structures to represent part-whole hierarchies. Clients treat individual objects and compositions uniformly.
-# Decorator: Adds additional responsibilities to an object dynamically.
-# Facade: Provides a unified interface to a set of interfaces in a subsystem, making it easier to use.
-# Flyweight: Uses sharing to support large numbers of fine-grained objects efficiently.
-# Proxy: Provides a surrogate or placeholder for another object to control access to it.
-## 3. Behavioral Patterns
+## Adapter: Converts the interface of a class into another interface the client expects.
+## Bridge: Decouples an abstraction from its implementation, allowing them to vary independently.
+## Composite: Composes objects into tree-like structures to represent part-whole hierarchies. Clients treat individual objects and compositions uniformly.
+## Decorator: Adds additional responsibilities to an object dynamically.
+## Facade: Provides a unified interface to a set of interfaces in a subsystem, making it easier to use.
+## Flyweight: Uses sharing to support large numbers of fine-grained objects efficiently.
+## Proxy: Provides a surrogate or placeholder for another object to control access to it.
+# 3. Behavioral Patterns
 These patterns focus on communication between objects, defining how they interact and distribute responsibilities.
 
 # Chain of Responsibility: Passes a request along a chain of handlers, allowing the processing to happen at various points in the chain.
