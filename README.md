@@ -1,0 +1,7 @@
+# microservices and patterns
+This site documents various patterns that are encountered in software engineering.  Some are generic design patterns and other practical patterns used in microservice design.
+
+## Table of Contents
+- [Link to Generic Design Patterns](/docs/design-patterns)
+- [Microservices Patterns](https://github.com/okrazc/microservices/microservices/wiki)
+
