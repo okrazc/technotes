@@ -7,7 +7,8 @@ The patterns are grouped into three categories based on their purpose:
 ## 1. Creational Patterns
 These patterns are concerned with the creation of objects, providing ways to instantiate them while decoupling the instantiation logic from the client code.
 
-# Abstract Factory: Creates families of related or dependent objects without specifying their concrete classes.
+# Abstract Factory: 
+Creates families of related or dependent objects without specifying their concrete classes.
 # Builder: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
 # Factory Method: Defines an interface for creating an object but allows subclasses to alter the type of object that will be created.
 # Prototype: Creates new objects by copying an existing object (the prototype).
