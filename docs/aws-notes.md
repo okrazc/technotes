@@ -386,3 +386,91 @@ Although not a traditional database, blockchain technology enables decentralized
 | **Blockchain**           | - Amazon Managed Blockchain                                        | Decentralized apps, supply chain, financial transactions              |
 
 Each of these database services is optimized for different types of workloads, so you can choose the right tool depending on your application's needs.
+
+## List all load-balancers available in AWS and their use cases ##
+AWS offers multiple types of **load balancers** through the **Elastic Load Balancing (ELB)** service, each optimized for different use cases. These load balancers distribute incoming application traffic across multiple targets (such as EC2 instances, containers, or IP addresses) in one or more Availability Zones, ensuring high availability, fault tolerance, and scalability.
+
+### 1. **Application Load Balancer (ALB)**
+   - **Layer**: Operates at the **Layer 7** (Application Layer) of the OSI model.
+   - **Best For**: HTTP/HTTPS traffic, web applications, microservices, and APIs.
+   
+   #### Features and Use Cases:
+   - **Content-based routing**: Routes traffic based on the content of the request, such as URL paths (e.g., `/images` or `/api`) or hostnames (e.g., `app.example.com`). You can define routing rules to send requests to different target groups based on these conditions.
+   - **Host-based and path-based routing**: Ideal for microservices architectures, allowing you to route traffic to different services based on the URL or host header.
+   - **WebSocket support**: Supports long-lived WebSocket connections, commonly used for real-time web applications.
+   - **Sticky sessions**: You can enable session stickiness (also known as session affinity) to bind a user's session to a specific target.
+   - **SSL termination**: ALB handles SSL offloading, making it easier to manage SSL certificates and decrypt incoming traffic.
+   - **Native HTTP/2 support**: Allows for faster data transfer through multiplexing and connection reuse.
+   - **WAF integration**: ALB can integrate with AWS Web Application Firewall (WAF) to add security for web traffic.
+   - **Microservices and containerized applications**: Works well with containerized applications and can route traffic to ECS (Elastic Container Service) or EKS (Elastic Kubernetes Service) based on specific rules.
+
+   #### How to Use:
+   - Ideal for **web applications**, **APIs**, and **microservices** architectures where you need content-based routing and advanced features like SSL termination and HTTP/2.
+   - Use ALB with **Amazon ECS** or **Amazon EKS** for routing traffic between services within a containerized environment.
+
+---
+
+### 2. **Network Load Balancer (NLB)**
+   - **Layer**: Operates at **Layer 4** (Transport Layer) of the OSI model.
+   - **Best For**: High-performance, low-latency traffic, TCP/UDP traffic, and handling millions of requests per second.
+
+   #### Features and Use Cases:
+   - **TCP/UDP traffic routing**: Unlike ALB, which only supports HTTP/HTTPS, NLB supports TCP and UDP traffic, making it suitable for handling protocols that work at the transport layer (e.g., DNS, VPN, or real-time gaming applications).
+   - **Extreme performance**: NLB is designed to handle **millions of requests per second** while maintaining ultra-low latency.
+   - **Static IP addresses**: NLB allows the assignment of static IP addresses or Elastic IPs, which makes it easier to reference the load balancer with a fixed address.
+   - **Preserves client IP**: NLB preserves the original source IP of the client, which can be important for certain types of applications like security audits or firewalls that require the original IP for filtering.
+   - **SSL pass-through**: NLB can pass SSL traffic directly to backend servers, allowing the servers to handle SSL encryption/decryption.
+   - **Multi-protocol support**: In addition to TCP, NLB supports **UDP** and **TLS** traffic, making it suitable for applications like DNS, real-time communications, or video streaming.
+
+   #### How to Use:
+   - Ideal for **performance-sensitive applications** like real-time communications, gaming, or high-throughput web services that need low-latency performance.
+   - Use NLB when you need to maintain the **source IP** address of the client and when dealing with **TCP/UDP** traffic or other transport layer protocols.
+
+---
+
+### 3. **Gateway Load Balancer (GWLB)**
+   - **Layer**: Operates at **Layer 3** (Network Layer) of the OSI model.
+   - **Best For**: Integrating with third-party **virtual appliances**, such as firewalls, intrusion detection and prevention systems (IDS/IPS), or deep packet inspection (DPI) systems.
+
+   #### Features and Use Cases:
+   - **Load balancing for network appliances**: GWLB allows you to deploy, scale, and manage virtual appliances like firewalls or traffic inspection tools, distributing traffic across multiple appliance instances.
+   - **Single entry and exit point**: It acts as a single gateway for incoming and outgoing traffic, allowing appliances to inspect traffic before it's forwarded to other services.
+   - **Inline processing**: GWLB can handle traffic in an inline, transparent manner, sending it to virtual appliances for security or filtering before routing it to its destination.
+   - **IP tunneling (Geneve protocol)**: Uses the Geneve encapsulation protocol to route traffic between the load balancer and virtual appliances, providing flexibility for routing and inspection.
+   - **Scalability**: GWLB automatically scales based on traffic volume, ensuring that you can handle fluctuations in demand without manually provisioning additional resources.
+
+   #### How to Use:
+   - Use GWLB for scenarios that require **deep packet inspection**, **firewalling**, or **traffic filtering** with virtual appliances.
+   - It’s ideal for deploying **network security appliances** in **high-availability architectures**.
+
+---
+
+### 4. **Classic Load Balancer (CLB)**
+   - **Layer**: Operates at **both Layer 4 (Transport Layer)** and **Layer 7 (Application Layer)**, but it's considered a legacy service.
+   - **Best For**: Simple load balancing scenarios (legacy systems).
+
+   #### Features and Use Cases:
+   - **Legacy Load Balancer**: The Classic Load Balancer is AWS’s older version of load balancing. It supports both TCP and HTTP/HTTPS traffic but lacks many advanced features available in ALB and NLB.
+   - **Basic load balancing**: Provides simple round-robin or least-connections load balancing between EC2 instances.
+   - **Layer 7 routing**: Supports limited HTTP/HTTPS routing features compared to the Application Load Balancer.
+
+   #### How to Use:
+   - Use CLB if you're maintaining **older applications** and do not need the more advanced features of the ALB or NLB.
+   - AWS recommends migrating to **ALB** or **NLB** for newer applications since CLB is mostly for legacy purposes.
+
+---
+
+### Summary of AWS Load Balancers:
+
+| Load Balancer               | Layer            | Protocols Supported | Best Use Cases                                     | Key Features                                       |
+|-----------------------------|------------------|---------------------|---------------------------------------------------|---------------------------------------------------|
+| **Application Load Balancer (ALB)** | Layer 7 (Application) | HTTP, HTTPS         | Web applications, APIs, microservices             | Path-based routing, WebSockets, SSL termination    |
+| **Network Load Balancer (NLB)**     | Layer 4 (Transport)   | TCP, UDP, TLS       | High-performance, low-latency traffic, gaming, DNS | Static IP, low latency, preserves source IP        |
+| **Gateway Load Balancer (GWLB)**    | Layer 3 (Network)     | IP traffic (Geneve) | Network security appliances, firewalls, DPI        | Inline packet processing, scaling virtual appliances |
+| **Classic Load Balancer (CLB)**     | Layer 4/7             | TCP, HTTP, HTTPS    | Legacy applications                               | Simple round-robin/least-connections load balancing |
+
+### Conclusion:
+- **ALB** is the best choice for **modern web applications**, **APIs**, and **microservices** requiring content-based routing and complex application layer features.
+- **NLB** is ideal for **high-performance, low-latency applications**, especially those dealing with **TCP/UDP traffic** or that require preserving client IP addresses.
+- **GWLB** is designed for **scaling and managing network security appliances**, such as firewalls and traffic inspection tools.
+- **CLB** is suited for **legacy applications** but should be avoided for new applications where ALB or NLB would provide better performance and features.
