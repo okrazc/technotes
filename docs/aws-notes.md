@@ -156,13 +156,86 @@ With DynamoDB, you can create database tables that can store and retrieve any am
 
 DynamoDB automatically spreads the data and traffic for your tables over a sufficient number of servers to handle your throughput and storage requirements, while maintaining consistent and fast performance. All of your data is stored on solid-state disks (SSDs) and is automatically replicated across multiple Availability Zones in an AWS Region, providing built-in high availability and data durability. 
 
-## Core Components of Amazon DynamoDB ##
-In DynamoDB, tables, items, and attributes are the core components that you work with. A table is a collection of items, and each item is a collection of attributes. DynamoDB uses primary keys to uniquely identify each item in a table and secondary indexes to provide more querying flexibility. 
+## What are core components of Amazon DynamoDB ##
+Amazon **DynamoDB** is a fully managed NoSQL database service offered by AWS, designed to provide fast, flexible, and highly scalable database solutions. Below are the **core components** of DynamoDB that define its architecture and how it operates:
 
-The following are the basic DynamoDB components:
+### 1. **Tables**
+   - **Definition**: Tables are the primary structure in DynamoDB, similar to tables in relational databases, but they store data in a **key-value** or **document** format.
+   - **Usage**: Each table stores a collection of items, and each item is a collection of attributes. Tables do not have a predefined schema (schema-less), meaning each item can have different attributes.
+   
+### 2. **Items**
+   - **Definition**: Items are individual records in a DynamoDB table, similar to rows in a relational database.
+   - **Usage**: Each item in DynamoDB is uniquely identified by a primary key. An item consists of a collection of attributes, which can be scalar values (string, number, binary) or more complex structures (sets, lists, maps).
 
-**Tables** – Similar to other database systems, DynamoDB stores data in tables. A table is a collection of data. For example, see the example table called People that you could use to store personal contact information about friends, family, or anyone else of interest. You could also have a Cars table to store information about vehicles that people drive.
+### 3. **Attributes**
+   - **Definition**: Attributes are the data elements associated with an item, similar to columns in relational databases.
+   - **Usage**: Attributes represent the fields in the table. For example, a table for user information might have attributes such as `UserId`, `Name`, `Email`, etc.
 
-**Items** – Each table contains zero or more items. An item is a group of attributes that is uniquely identifiable among all of the other items. In a People table, each item represents a person. For a Cars table, each item represents one vehicle. Items in DynamoDB are similar in many ways to rows, records, or tuples in other database systems. In DynamoDB, there is no limit to the number of items you can store in a table.
+### 4. **Primary Keys**
+   - **Definition**: A primary key is a unique identifier for each item in a DynamoDB table.
+   - **Types**:
+     - **Partition Key (Hash Key)**: A single attribute used to distribute data across partitions. All items with the same partition key are stored together.
+     - **Composite Key (Partition Key + Sort Key)**: A two-part primary key where the partition key is combined with a sort key. The partition key is used to distribute data, and the sort key organizes data within a partition.
 
-**Attributes** – Each item is composed of one or more attributes. An attribute is a fundamental data element, something that does not need to be broken down any further. For example, an item in a People table contains attributes called PersonID, LastName, FirstName, and so on. For a Department table, an item might have attributes such as DepartmentID, Name, Manager, and so on. Attributes in DynamoDB are similar in many ways to fields or columns in other database systems.
+### 5. **Secondary Indexes**
+   - **Definition**: Indexes allow querying the table on attributes other than the primary key, which enhances querying flexibility.
+   - **Types**:
+     - **Global Secondary Index (GSI)**: A GSI allows you to query items using a different partition and sort key combination, independent of the primary key.
+     - **Local Secondary Index (LSI)**: An LSI uses the same partition key as the primary key but a different sort key, allowing for more flexible querying within the partition.
+
+### 6. **Streams (DynamoDB Streams)**
+   - **Definition**: DynamoDB Streams captures a time-ordered sequence of changes (insert, update, delete) to items in a DynamoDB table.
+   - **Usage**: Streams can be used for real-time processing of changes, triggering AWS Lambda functions, or enabling cross-region replication.
+
+### 7. **Provisioned Throughput / On-Demand Mode**
+   - **Provisioned Throughput**:
+     - **Definition**: Specifies the maximum number of read and write capacity units (RCUs/WCUs) that the table can handle.
+     - **Usage**: You manually set the amount of capacity (read and write units) your table needs. Each RCU provides up to 4KB of data for strongly consistent reads or twice that for eventually consistent reads. Each WCU provides up to 1KB of data per write operation.
+   - **On-Demand Mode**:
+     - **Definition**: Automatically scales to handle the load without manual provisioning of capacity.
+     - **Usage**: On-demand mode allows you to pay for read and write requests per second as they happen, making it more suitable for unpredictable workloads.
+
+### 8. **Partitions**
+   - **Definition**: DynamoDB automatically divides tables into partitions to handle large datasets and ensure scalability.
+   - **Usage**: Partitions allow DynamoDB to scale both storage and throughput automatically, with data being distributed across multiple partitions based on the partition key.
+
+### 9. **Capacity Modes**
+   - **Provisioned Mode**: You specify the number of reads and writes per second.
+   - **On-Demand Mode**: DynamoDB automatically adjusts to handle read/write traffic without requiring any manual scaling.
+
+### 10. **Consistency Models**
+   - **Eventually Consistent Reads**: The default read behavior, where the data might take a moment to propagate across all partitions and replicas.
+   - **Strongly Consistent Reads**: Provides immediate consistency, ensuring the latest data is returned for all reads, but at the cost of additional read capacity units.
+
+### 11. **Auto Scaling**
+   - **Definition**: DynamoDB can automatically adjust the provisioned throughput of a table based on traffic patterns.
+   - **Usage**: You set thresholds for read and write capacities, and DynamoDB increases or decreases the provisioned capacity based on traffic.
+
+### 12. **DAX (DynamoDB Accelerator)**
+   - **Definition**: DAX is a fully managed, in-memory caching service for DynamoDB that improves read performance.
+   - **Usage**: DAX reduces the load on your DynamoDB tables and offers significantly faster reads (up to 10x faster) by serving cached data from memory.
+
+### 13. **Global Tables**
+   - **Definition**: Global Tables provide a fully replicated, multi-region, and multi-master database, allowing you to read and write data in multiple regions.
+   - **Usage**: Suitable for applications that require high availability and low-latency access across different geographical regions.
+
+---
+
+### Summary of DynamoDB Core Components:
+
+| Component              | Description                                                                                   |
+|------------------------|-----------------------------------------------------------------------------------------------|
+| **Tables**             | Collections of items, similar to relational database tables.                                   |
+| **Items**              | Individual records in a table, similar to rows in relational databases.                        |
+| **Attributes**         | Data elements associated with an item, similar to columns in relational databases.             |
+| **Primary Keys**       | Unique identifier for each item (Partition Key or Composite Key).                              |
+| **Secondary Indexes**  | Enables querying on non-primary key attributes (Global and Local Secondary Indexes).           |
+| **Streams**            | Captures data modifications in real-time for processing or replication.                       |
+| **Provisioned/On-Demand Throughput** | Manages capacity, either manually (provisioned) or dynamically (on-demand).             |
+| **Partitions**         | Divides tables for scalability and distributing data.                                          |
+| **Consistency Models** | Defines how quickly data becomes available after being written (eventually vs. strongly consistent). |
+| **Auto Scaling**       | Automatically adjusts table throughput based on traffic patterns.                              |
+| **DAX**                | In-memory caching layer to accelerate read operations.                                         |
+| **Global Tables**      | Multi-region replication for globally distributed applications.                                |
+
+These components work together to deliver a highly available, scalable, and flexible NoSQL database service in DynamoDB.
