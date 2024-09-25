@@ -1,5 +1,5 @@
 
-##Compare EBS and S3##
+## Compare EBS and S3 ##
 In AWS, both **EBS (Elastic Block Store)** and **S3 (Simple Storage Service)** are used for storage, but they serve different purposes and have distinct use cases depending on how you need to access, store, and manage your data. Here's a comparison of when to use **EBS** versus **S3**:
 
 ### 1. **EBS (Elastic Block Store)**:
