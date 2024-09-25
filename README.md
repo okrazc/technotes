@@ -4,4 +4,3 @@ This site documents various patterns that are encountered in software engineerin
 ## Table of Contents
 - [Generic Design Patterns](./docs/design-patterns.md)
 - [Microservices Patterns](wiki)
-
