@@ -175,6 +175,3 @@
    ```
 
 ---
-
-### Next Steps
-We can dive deeper into any of the topics above or practice more questions based on what you're most concerned about for the interview. Let me know how you'd like to proceed!
