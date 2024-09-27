@@ -1,5 +1,3 @@
-To prepare you for Spring Security, let’s cover the core topics you'll likely encounter in an interview and some practical aspects you should be familiar with. Then, I’ll provide some targeted questions to practice.
-
 ### Key Concepts in Spring Security
 
 1. **Authentication & Authorization**:
