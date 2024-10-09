@@ -17,7 +17,7 @@ They enable the creation of consistent and visually appealing designs.
 Tag Selectors
 Tag selectors target HTML elements based on their tag names. They apply styles to all instances of a particular tag.
 
-#Syntax for Tag Selector:
+### Syntax for Tag Selector:
 ```CSS
 1 tagName {
 2     /* Styles for the elements with the specified tag name */
@@ -25,76 +25,61 @@ Tag selectors target HTML elements based on their tag names. They apply styles t
 ```
 Replace tagName with the actual HTML tag name you want to style.
 
-Example: Styling Headings
+### Example: Styling Headings
 
-1
-2
-3
-4
-5
+```
 h1 { 
     /* Styles for h1 elements */ 
     color: #3366cc; 
     font-size: 24px; 
 }
-Copied!
-This CSS rule targets all <h1> elements.
-Applies blue color and a font size of 24 pixels to all <h1> headings.
-ID Selectors
+```
+
+* This CSS rule targets all <h1> elements.
+* Applies blue color and a font size of 24 pixels to all <h1> headings.
+
+# ID Selectors
 ID selectors target a specific HTML element using its unique ID attribute. The ID attribute is assigned to an HTML element to provide a unique identifier for that element within the document. ID selectors are denoted by a hash symbol (#) followed by the ID.
 
 Syntax for ID Selector:
-
-1
-2
-3
+```
 #yourID {
     /* Styles for the element with the specified ID */
 }
-Copied!
+```
+
 Replace yourID with the actual ID assigned to the HTML element.
 
-Example: Styling a Unique Element
-
-1
-2
-3
-4
-5
+### Example: Styling a Unique Element
+```
 #header {
     /* Styles for the element with id="header" */ 
     background-color: #f0f0f0; 
     padding: 10px; 
 }
-Copied!
-This CSS rule targets an element with the ID header
-Applies a light gray background and 10 pixels of padding to the element.
-Class Selectors
+```
+
+* This CSS rule targets an element with the ID header
+* Applies a light gray background and 10 pixels of padding to the element.
+
+# Class Selectors
 Class selectors target HTML elements with a specific class attribute. Multiple elements can share the same class. Class selectors are denoted by a period (.) followed by the class name.
 
 Syntax for Class Selector:
-
-1
-2
-3
+```
 .className {
     /* Styles for the elements with the specified class */
 }
-Copied!
+```
 Replace className with the actual class name you want to style.
 
 Example: Styling Multiple Elements
-
-1
-2
-3
-4
-5
+```
 .highlight { 
     /* Styles for elements with class="highlight" */
     background-color: #ffd700; 
     color: #333; 
 }
-Copied!
+```
 This CSS rule targets all elements with the class highlight
 Applies a yellow background and dark text color to all elements with the class highlight
