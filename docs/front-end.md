@@ -43,7 +43,7 @@ Syntax for ID Selector:
 }
 ```
 
-Replace ** yourID ** with the actual ID assigned to the HTML element.
+Replace *yourID* with the actual ID assigned to the HTML element.
 
 ### Example: Styling a Unique Element
 ```
@@ -54,7 +54,7 @@ Replace ** yourID ** with the actual ID assigned to the HTML element.
 }
 ```
 
-* This CSS rule targets an element with the ID **header**
+* This CSS rule targets an element with the ID *header*
 * Applies a light gray background and 10 pixels of padding to the element.
 
 # Class Selectors
