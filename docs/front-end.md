@@ -4,6 +4,7 @@
 *What are CSS Selectors?*
 CSS selectors are patterns used to select and style HTML elements.
 They define the relationship between HTML elements and the styles applied to them.
+
 *Why are Selectors Important?*
 Selectors allow precise targeting of specific elements.
 They enable the creation of consistent and visually appealing designs.
