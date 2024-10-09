@@ -17,15 +17,12 @@ They enable the creation of consistent and visually appealing designs.
 Tag Selectors
 Tag selectors target HTML elements based on their tag names. They apply styles to all instances of a particular tag.
 
-Syntax for Tag Selector:
-
-1
-2
-3
-tagName {
-    /* Styles for the elements with the specified tag name */
-}
-Copied!
+#Syntax for Tag Selector:
+```CSS
+1 tagName {
+2     /* Styles for the elements with the specified tag name */
+3 }
+```
 Replace tagName with the actual HTML tag name you want to style.
 
 Example: Styling Headings
