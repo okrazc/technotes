@@ -66,7 +66,7 @@ Syntax for Class Selector:
     /* Styles for the elements with the specified class */
 }
 ```
-Replace **className** with the actual class name you want to style.
+Replace *className* with the actual class name you want to style.
 
 Example: Styling Multiple Elements
 ```
