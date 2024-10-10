@@ -58,7 +58,7 @@ Replace *yourID* with the actual ID assigned to the HTML element.
 * This CSS rule targets an element with the ID *header*
 * Applies a light gray background and 10 pixels of padding to the element.
 
-# Class Selectors
+## Class Selectors
 Class selectors target HTML elements with a specific class attribute. Multiple elements can share the same class. Class selectors are denoted by a period (.) followed by the class name.
 
 Syntax for Class Selector:
