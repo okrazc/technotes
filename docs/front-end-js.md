@@ -14,6 +14,8 @@ This is a concise course outline for JavaScript. It covers core JavaScript featu
 11. [Testing in JavaScript](#11-testing-in-javascript)
 12. [Practice Projects](#practice-projects)
 13. [Short History of JavaScript](#12-javascript-history)
+14. [Wrapper Objects](#wrapper-objects)
+15. [Array Object](#array-object)
 
 
 ### 1. **JavaScript Basics (Refresher)**
@@ -99,12 +101,12 @@ This is a concise course outline for JavaScript. It covers core JavaScript featu
    - **Test-Driven Development (TDD)**: Writing tests before code.
    - **Mocking**: Simulating modules or functions in unit tests.
 
-### Practice Projects
+### 12. **Practice Projects**
    - **To-Do List App**: Covers DOM manipulation, events, forms, and localStorage.
    - **API Fetch Project**: Asynchronous code with `fetch()`, Promises, and error handling.
    - **ES6 Modules Project**: Splitting functionality into multiple modules using ES6 imports/exports.
 
-### 12. **History of JavaScript**
+### 13. **History of JavaScript**
 JavaScript has a fascinating history that spans several decades, and ES6 (ECMAScript 2015) is a significant milestone in its evolution. Here’s an overview of the key events in JavaScript’s history:
 
 ### History of JavaScript
@@ -179,7 +181,7 @@ JavaScript treats primitive types as their own data types (for efficiency), but 
 
 3. The wrapper object is used to call the method, and then the object is immediately discarded.
 
-### Example of Wrapper Objects:
+### 13. Example of Wrapper Objects:
 
 #### String Wrapper:
 Even though strings are primitives, JavaScript allows you to call methods on them:
