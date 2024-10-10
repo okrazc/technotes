@@ -1,5 +1,6 @@
 
-## CSS Selectors - Tags, IDs, and Classes
+# CSS 
+## Selectors - Tags, IDs, and Classes
 
 *What are CSS Selectors?*
 CSS selectors are patterns used to select and style HTML elements.
@@ -303,4 +304,3 @@ To start using Flexbox, apply `display: flex` to a container. Then, Flexbox prop
 3. **Custom Layouts**: Use `flex-direction: column` to create vertical navigation bars or stacks of elements.
 4. **Flexibility**: Combine Flexbox with media queries to make layouts responsive to different screen sizes.
 
-Let me know if you'd like more examples or have specific design challenges you're facing!
