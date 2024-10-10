@@ -104,7 +104,7 @@ This is a concise course outline for JavaScript. It covers core JavaScript featu
    - **API Fetch Project**: Asynchronous code with `fetch()`, Promises, and error handling.
    - **ES6 Modules Project**: Splitting functionality into multiple modules using ES6 imports/exports.
 
-### 12. ##History of JavaScript##
+### 12. **History of JavaScript**
 JavaScript has a fascinating history that spans several decades, and ES6 (ECMAScript 2015) is a significant milestone in its evolution. Here’s an overview of the key events in JavaScript’s history:
 
 ### History of JavaScript
