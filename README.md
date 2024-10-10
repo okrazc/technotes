@@ -6,5 +6,5 @@ This documents cover various software engineering topics and patterns often foun
 - [Microservices Patterns](https://github.com/okrazc/microservices/wiki)
 - [Pivotal CloudFoundry or VMWare Tanzu](./docs/PCF-notes.md)
 - [AWS Notes](./docs/aws-notes.md)
-- [Front-End SE Notes](./docs/front-end.md)
+- [Front-End CSS Notes](./docs/front-end-css.md)
 - [Java Spring Notes](./docs/java-spring-interview.md)
