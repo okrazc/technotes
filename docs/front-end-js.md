@@ -419,7 +419,7 @@ fruits.forEach(fruit => console.log(fruit));
 
 Sure! Understanding variables in JavaScript is fundamental, as they are used to store data values. Let’s go over key concepts you need to know about variables in JavaScript.
 
-### 1. **Variables**
+### **Variables**
 
 In JavaScript, variables can be declared using three keywords: `var`, `let`, and `const`.
 
