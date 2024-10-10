@@ -34,7 +34,7 @@ h1 {
 * This CSS rule targets all `<h1>` elements.
 * Applies blue color and a font size of 24 pixels to all `<h1>` headings.
 
-# ID Selectors
+## ID Selectors
 ID selectors target a specific HTML element using its unique ID attribute. The ID attribute is assigned to an HTML element to provide a unique identifier for that element within the document. ID selectors are denoted by a hash symbol '(#)' followed by the ID.
 
 Syntax for ID Selector:
