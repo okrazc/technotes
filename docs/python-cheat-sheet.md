@@ -1,4 +1,4 @@
-```markdown
+
 # Python Dictionaries and Sets Cheat Sheet
 
 ## Dictionaries
