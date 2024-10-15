@@ -1,93 +1,278 @@
-# Python CheatSheet: Dictionaries and Sets
+```markdown
+# Python Dictionaries and Sets Cheat Sheet
 
-Package/Method	Description	Code Example
-Creating a Dictionary	A dictionary is a built-in data type that represents a collection of key-value pairs. Dictionaries are enclosed in curly braces {}.	Example:
-1.	1
-2.	2
-1.	dict_name = {} #Creates an empty dictionary
-2.	person = { "name": "John",  "age": 30, "city": "New York"}
-Copied!
-Accessing Values	You can access the values in a dictionary using their corresponding keys.	Syntax:
-1.	1
-1.	Value = dict_name["key_name"]
-Copied!
-Example:
-1.	1
-2.	2
-1.	name = person["name"]
-2.	age = person["age"]
-Copied!
-Add or modify	Inserts a new key-value pair into the dictionary. If the key already exists, the value will be updated; otherwise, a new entry is created.	Syntax:
-1.	1
-1.	dict_name[key] = value
-Copied!
-Example:
-1.	1
-2.	2
-1.	person["Country"] = "USA" # A new entry will be created.
-2.	person["city"] = "Chicago"  # Update the existing value for the same key
-Copied!
-del	Removes the specified key-value pair from the dictionary. Raises a KeyError if the key does not exist.	Syntax:
-1.	1
-1.	del dict_name[key]
-Copied!
-Example:
-1.	1
-1.	del person["Country"]
-Copied!
-update()	The update() method merges the provided dictionary into the existing dictionary, adding or updating key-value pairs.	Syntax:
-1.	1
-1.	dict_name.update({key: value})
-Copied!
-Example:
-1.	1
-1.	person.update({"Profession": "Doctor"})
-Copied!
-clear()	The clear() method empties the dictionary, removing all key-value pairs within it. After this operation, the dictionary is still accessible and can be used further.	Syntax:
-1.	1
-1.	dict_name.clear()
-Copied!
-Example:
-1.	1
-1.	grades.clear()
-Copied!
-key existence	You can check for the existence of a key in a dictionary using the in keyword	Example:
-1.	1
-2.	2
-1.	if "name" in person:
-2.	    print("Name exists in the dictionary.")
-Copied!
-copy()	Creates a shallow copy of the dictionary. The new dictionary contains the same key-value pairs as the original, but they remain distinct objects in memory.	Syntax:
-1.	1
-1.	new_dict = dict_name.copy()
-Copied!
-Example:
-1.	1
-2.	2
-1.	new_person = person.copy()
-2.	new_person = dict(person) # another way to create a copy of dictionary
-Copied!
-keys()	Retrieves all keys from the dictionary and converts them into a list. Useful for iterating or processing keys using list methods.	Syntax:
-1.	1
-1.	keys_list = list(dict_name.keys())
-Copied!
-Example:
-1.	1
-1.	person_keys = list(person.keys())
-Copied!
-values()	Extracts all values from the dictionary and converts them into a list. This list can be used for further processing or analysis.	Syntax:
-1.	1
-1.	values_list = list(dict_name.values())
-Copied!
-Example:
-1.	1
-1.	person_values = list(person.values())
-Copied!
-items()	Retrieves all key-value pairs as tuples and converts them into a list of tuples. Each tuple consists of a key and its corresponding value.	Syntax:
-1.	1
-1.	items_list = list(dict_name.items())
-Copied!
-Example:
-1.	1
-1.	info = list(person.items())
-Copied!
+## Dictionaries
+
+### Creating a Dictionary
+A dictionary is a collection of key-value pairs, enclosed in curly braces `{}`.
+
+**Example:**
+```python
+dict_name = {}  # Creates an empty dictionary
+person = { "name": "John", "age": 30, "city": "New York" }
+```
+
+### Accessing Values
+Access values in a dictionary using their corresponding keys.
+
+**Syntax:**
+```python
+value = dict_name["key_name"]
+```
+
+**Example:**
+```python
+name = person["name"]
+age = person["age"]
+```
+
+### Adding or Modifying Entries
+Insert or update a key-value pair. If the key exists, the value is updated; otherwise, a new entry is created.
+
+**Syntax:**
+```python
+dict_name[key] = value
+```
+
+**Example:**
+```python
+person["country"] = "USA"  # New entry
+person["city"] = "Chicago"  # Update existing value
+```
+
+### Deleting Entries
+Remove a key-value pair using `del`. Raises `KeyError` if the key does not exist.
+
+**Syntax:**
+```python
+del dict_name[key]
+```
+
+**Example:**
+```python
+del person["country"]
+```
+
+### Merging Dictionaries with `update()`
+Merges another dictionary into the current one, adding or updating key-value pairs.
+
+**Syntax:**
+```python
+dict_name.update({key: value})
+```
+
+**Example:**
+```python
+person.update({"profession": "Doctor"})
+```
+
+### Clearing a Dictionary
+Remove all key-value pairs with `clear()`. The dictionary remains usable.
+
+**Syntax:**
+```python
+dict_name.clear()
+```
+
+**Example:**
+```python
+person.clear()
+```
+
+### Checking for Key Existence
+Check if a key is present in the dictionary using the `in` keyword.
+
+**Example:**
+```python
+if "name" in person:
+    print("Name exists.")
+```
+
+### Copying a Dictionary
+Create a shallow copy of a dictionary using `copy()`.
+
+**Syntax:**
+```python
+new_dict = dict_name.copy()
+```
+
+**Example:**
+```python
+new_person = person.copy()
+```
+
+### Retrieving Keys
+Get all keys in a dictionary as a list.
+
+**Syntax:**
+```python
+keys_list = list(dict_name.keys())
+```
+
+**Example:**
+```python
+person_keys = list(person.keys())
+```
+
+### Retrieving Values
+Get all values from a dictionary as a list.
+
+**Syntax:**
+```python
+values_list = list(dict_name.values())
+```
+
+**Example:**
+```python
+person_values = list(person.values())
+```
+
+### Retrieving Key-Value Pairs
+Get all key-value pairs as a list of tuples.
+
+**Syntax:**
+```python
+items_list = list(dict_name.items())
+```
+
+**Example:**
+```python
+info = list(person.items())
+```
+
+---
+
+## Sets
+
+### Defining a Set
+A set is an unordered collection of unique elements, enclosed in curly braces `{}`.
+
+**Example:**
+```python
+fruits = {"apple", "banana", "orange"}
+```
+
+### Adding Elements to a Set
+Add elements to a set with `add()`. Duplicates are automatically removed.
+
+**Syntax:**
+```python
+set_name.add(element)
+```
+
+**Example:**
+```python
+fruits.add("mango")
+```
+
+### Removing Elements from a Set
+- **`discard()`**: Removes the element if present, does nothing if not.
+- **`remove()`**: Removes the element, raises `KeyError` if not found.
+
+**Syntax (discard):**
+```python
+set_name.discard(element)
+```
+
+**Syntax (remove):**
+```python
+set_name.remove(element)
+```
+
+**Example:**
+```python
+fruits.discard("apple")
+fruits.remove("banana")
+```
+
+### Clearing a Set
+Remove all elements from the set with `clear()`.
+
+**Syntax:**
+```python
+set_name.clear()
+```
+
+**Example:**
+```python
+fruits.clear()
+```
+
+### Copying a Set
+Create a shallow copy of a set with `copy()`.
+
+**Syntax:**
+```python
+new_set = set_name.copy()
+```
+
+**Example:**
+```python
+new_fruits = fruits.copy()
+```
+
+### Set Operations
+Perform operations like union, intersection, difference, and symmetric difference between sets.
+
+**Syntax:**
+```python
+union_set = set1.union(set2)
+intersection_set = set1.intersection(set2)
+difference_set = set1.difference(set2)
+sym_diff_set = set1.symmetric_difference(set2)
+```
+
+**Example:**
+```python
+combined = fruits.union(colors)
+common = fruits.intersection(colors)
+unique_to_fruits = fruits.difference(colors)
+sym_diff = fruits.symmetric_difference(colors)
+```
+
+### Checking Subsets and Supersets
+- **`issubset()`**: Check if all elements of the current set are in another set.
+- **`issuperset()`**: Check if the current set contains all elements of another set.
+
+**Syntax:**
+```python
+is_subset = set1.issubset(set2)
+is_superset = set1.issuperset(set2)
+```
+
+**Example:**
+```python
+is_subset = fruits.issubset(colors)
+is_superset = colors.issuperset(fruits)
+```
+
+### Removing and Returning Elements
+- **`pop()`**: Removes and returns an arbitrary element from the set.
+
+**Syntax:**
+```python
+removed_element = set_name.pop()
+```
+
+**Example:**
+```python
+removed_fruit = fruits.pop()
+```
+
+### Updating a Set
+Add elements from an iterable to a set using `update()`. Duplicates are ignored.
+
+**Syntax:**
+```python
+set_name.update(iterable)
+```
+
+**Example:**
+```python
+fruits.update(["kiwi", "grape"])
+```
+
+---
+
+This cheat sheet provides a quick overview of common dictionary and set operations in Python. Use this as a handy reference for working with these data structures.
+```
