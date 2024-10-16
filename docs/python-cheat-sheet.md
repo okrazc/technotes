@@ -432,8 +432,3 @@ if friend1_likes_comedy or friend2_likes_action or friend3_likes_drama:
 - **Logical Operators** (`not`, `and`, `or`) are used to combine conditions.
 ```
 
-### Improvements:
-1. **Clarified** the purpose of comparison operators and branching.
-2. **Added real-life examples** to explain logical operators, making the topic more relatable.
-3. **Expanded explanations** for each operator and conditional statement to make the content more comprehensive.
-4. **Improved formatting** for inline code and block code, ensuring code lines and examples are easy to follow.
