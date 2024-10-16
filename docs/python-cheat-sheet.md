@@ -437,5 +437,3 @@ if friend1_likes_comedy or friend2_likes_action or friend3_likes_drama:
 2. **Added real-life examples** to explain logical operators, making the topic more relatable.
 3. **Expanded explanations** for each operator and conditional statement to make the content more comprehensive.
 4. **Improved formatting** for inline code and block code, ensuring code lines and examples are easy to follow.
-
-This expanded content is well-suited for learning the topic, and you can paste it directly into your GitHub markdown file!
