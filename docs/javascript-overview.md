@@ -1,5 +1,3 @@
-Here’s a draft documentation page based on the topics you provided. You can customize and refine it for your GitHub JavaScript documentation page.
-
 ---
 
 # JavaScript Overview
@@ -107,5 +105,3 @@ btn.addEventListener("click", () => {
 JavaScript is essential for building interactive web applications. From manipulating the DOM to enhancing functionality through functions and control statements, JavaScript provides the tools to create dynamic, user-friendly experiences on the web. For more details, refer to specific documentation on DOM, functions, and APIs to further explore the language's capabilities.
 
 ---
-
-You can add this to your GitHub repository for reference or learning purposes. Let me know if you want to modify any sections!
