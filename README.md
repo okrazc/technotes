@@ -7,4 +7,7 @@ This documents cover various software engineering topics and patterns often foun
 - [Pivotal CloudFoundry or VMWare Tanzu](./docs/PCF-notes.md)
 - [AWS Notes](./docs/aws-notes.md)
 - [Front-End CSS Notes](./docs/front-end-css.md)
+- [Front-End JavaScript Notes](./docs/front-end-js.md)
+- [JavaScript Overview](./docs/javascript-overview.md)
 - [Java Spring Notes](./docs/java-spring-interview.md)
+- [Java Data Structures Notes](./docs/java-data-structures.md)
