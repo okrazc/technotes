@@ -11,3 +11,4 @@ This documents cover various software engineering topics and patterns often foun
 - [JavaScript Overview](./docs/javascript-overview.md)
 - [Java Spring Notes](./docs/java-spring-interview.md)
 - [Java Data Structures Notes](./docs/java-data-structures.md)
+- [Kafka Notes](./docs/kafka-notes.md)
