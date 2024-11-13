@@ -271,7 +271,6 @@ set_name.update(iterable)
 ```python
 fruits.update(["kiwi", "grape"])
 ```
-To improve and expand the content on **Comparison Operators in Python** with better formatting and additional details, I will break down each section, enhance clarity, add explanations where needed, and ensure proper code formatting. Here's an enhanced version of your content suitable for use in GitHub markdown or similar documentation:
 
 ```markdown
 # Python Comparison Operators, Branching, and Logical Operators
