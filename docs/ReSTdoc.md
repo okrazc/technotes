@@ -124,7 +124,7 @@ Example::
 3. **Standardization**: Many Python projects use ReST for consistency in documentation.
 
 ---
-Certainly! Let's go through a **hands-on example** of using **Sphinx** to generate documentation for a Python project. Along the way, I'll also demonstrate key **reStructuredText (ReST) features** used in docstrings.
+**hands-on example** of using **Sphinx** to generate documentation for a Python project with key **reStructuredText (ReST) features** used in docstrings.
 
 ---
 
