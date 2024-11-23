@@ -12,3 +12,4 @@ This documents cover various software engineering topics and patterns often foun
 - [Java Spring Notes](./docs/java-spring-interview.md)
 - [Java Data Structures Notes](./docs/java-data-structures.md)
 - [Kafka Notes](./docs/kafka-notes.md)
+- [Python Notes](./docs/python-cheat-sheet.md)
