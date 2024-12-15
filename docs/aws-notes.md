@@ -5,7 +5,7 @@ This documents cover various topics and patterns related to AWS concepts and bes
 ## Table of Contents
 - [EBS and S3](##compare-ebs-and-s3)
 - [Storage Options](##what-are-storage-options-in-aws-and-how-they-compare-with-traditional-storage-options-used-in-private-data-centers)
-- [DynamoDB](##what-is-amazon-dynamodb##)
+- [DynamoDB](##what-is-amazon-dynamodb)
 
 ## Compare EBS and S3
 In AWS, both **EBS (Elastic Block Store)** and **S3 (Simple Storage Service)** are used for storage, but they serve different purposes and have distinct use cases depending on how you need to access, store, and manage your data. Here's a comparison of when to use **EBS** versus **S3**:
