@@ -4,7 +4,7 @@ This documents cover various topics and patterns related to AWS concepts and bes
 
 ## Table of Contents
 - [EBS and S3](##compare-ebs-and-s3)
-- [Storage Options](##what-are-storage-options-in-aws-and-how-they-compare-with-traditional-storage-options-used-in-private-data-centers)
+- [Storage Options](#what-are-storage-options-in-aws-and-how-they-compare-with-traditional-storage-options-used-in-private-data-centers)
 - [DynamoDB](##what-is-amazon-dynamodb)
 
 ## Compare EBS and S3
