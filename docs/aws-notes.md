@@ -3,8 +3,8 @@
 This documents cover various topics and patterns related to AWS concepts and best practices
 
 ## Table of Contents
-- [EBS and S3](##compare ebs and s3)
-- [Storage Options](##What are storage options in AWS and how they compare with traditional storage options used in private data centers?##)
+- [EBS and S3](##compare)
+- [Storage Options](##what)
 - [DynamoDB](##What Is Amazon DynamoDB?##)
 
 ## Compare EBS and S3
@@ -87,7 +87,7 @@ In AWS, both **EBS (Elastic Block Store)** and **S3 (Simple Storage Service)** a
 
 In summary, **use EBS** for high-performance, low-latency, block-level storage that needs to be attached to EC2 instances (e.g., running databases or applications), and **use S3** for object storage when storing and retrieving large amounts of data, especially for static content, backups, or analytics workloads.
 
-## What are storage options in AWS and how they compare with traditional storage options used in private data centers? ##
+## What are storage options in AWS and how they compare with traditional storage options used in private data centers?
 When working in traditional private data centers, various storage options were used with Virtual Machines (VMs) depending on performance, capacity, and use case requirements. The cloud-based storage services like **Amazon EBS**, **S3**, and others in AWS correspond to similar storage concepts used in physical or virtualized environments in private data centers. Here’s how these cloud storage solutions align with the traditional storage options:
 
 ### 1. **EBS (Elastic Block Store) = SAN/NAS or Local Disks in Private Data Centers**
