@@ -1,4 +1,4 @@
-##Security Comparison between Oath2 and Basic Auth
+## Security Comparison Between Oath2 and Basic Auth
 
 The confusion is understandable, as at first glance, passing a `client_id` and `client_secret` might seem similar to Basic Authentication with a username and password. However, OAuth2 offers several security enhancements and best practices that make it significantly more secure than Basic Authentication with base64-encoded credentials. Let’s break this down:
 
