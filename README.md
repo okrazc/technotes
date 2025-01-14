@@ -13,3 +13,4 @@ This documents cover various software engineering topics and patterns often foun
 - [Java Data Structures Notes](./docs/java-data-structures.md)
 - [Kafka Notes](./docs/kafka-notes.md)
 - [Python Notes](./docs/python-cheat-sheet.md)
+- [Oath2 vs. Basic Auth - Security Comparison](./docs/oath2basic.md)
