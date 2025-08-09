@@ -102,4 +102,62 @@ Patterns make prompts:
 
 If you want, I can also write **ready-to-use Code Interpreter patterns** for these so you can upload a dataset or codebase, and the AI will follow the pattern automatically while running analysis on your files. That way you can drop in any architecture diagram, pipeline config, or log file, and the AI applies the same pattern every time.
 
+*PROMPT*
+Pick the ChatGPT Code Interpreter prompt pattern that you think would be most helpful to someone like me. Then, write a social media post about how you are taking the Coursera course "ChatGPT Code Interpreter by Jules White" and explain what Code Interpreter is, explain the problem the prompt pattern solves, what data you could upload with the prompt pattern, and what it would do for other people like me that would make their lives so much easier. Make the post exciting and have viral potential. Make sure readers have enough information to quickly cut/paste the pattern into Code Interpreter and know what to include with it in order to immediately take advantage of the prompt pattern.
+*ANSWER*
+Here’s the post I’d write — I’ve chosen the **Fact Check List Pattern** for Code Interpreter because, as a software engineer and architect, you deal with AI answers that sound great but can sneak in wrong assumptions, wrong versions, or compliance issues. This pattern makes AI “show its work” so you can instantly see what’s safe and what’s suspect.
 
+---
+
+🚀 **Just leveled up my AI game with the Coursera course *“ChatGPT Code Interpreter” by Jules White*** — and I have to share this one pattern that’s a total lifesaver for software engineers, architects, and AI-curious techies.
+
+**💡 What’s Code Interpreter?**
+It’s ChatGPT’s mode that lets you upload files (code, datasets, logs, diagrams) and have the AI run analysis, process data, even generate new files — all inside a secure sandbox. It’s like pairing ChatGPT’s brain with a built-in Python notebook.
+
+**🔥 The Problem This Solves**
+Ever get a beautifully written AI answer… only to find it’s confidently wrong? Wrong library versions. Made-up compliance claims. Nonexistent API endpoints. 😬
+The **Fact Check List Prompt Pattern** forces the AI to **list every fact or assumption** it used in its answer, so you can instantly validate them.
+
+**📂 What to Upload with It**
+
+* Java/Spring Boot service configs
+* OpenShift/Tekton deployment YAMLs
+* Architecture diagrams in CSV or JSON
+* Log files for performance/security audits
+
+**⚙️ What Happens**
+You drop in your file, run the pattern, and Code Interpreter will:
+
+1. Analyze the file
+2. Give its answer
+3. Append a **“Fact Check List”** — every key assumption and data point it relied on
+   You know exactly what to verify *before* you act on it.
+
+---
+
+💬 **Copy/Paste This Into Code Interpreter:**
+
+```
+From now on, when you analyze any file I upload, 
+provide your full answer first, then list the set of facts 
+your answer depends on that should be fact-checked. 
+Only include facts related to security, performance, 
+or compliance.
+
+Start by summarizing the file's contents and its purpose.
+```
+
+📌 **Then:** Upload your code, logs, YAMLs, or architecture docs.
+
+---
+
+**Why This is a Game-Changer**
+If you’re building systems where **wrong answers = downtime or security risk**, this pattern makes ChatGPT your *auditable* AI assistant. It’s saved me hours of manual double-checking and helped me catch subtle mistakes before they became production bugs.
+
+🔥 If you work with AI and software, try this today — your future self will thank you.
+
+---
+
+I can also make a **show-and-tell example** with one of your actual deployment configs so the post includes a real “before/after” from the pattern — that would seriously boost its viral potential.
+
+Do you want me to create that next?
