@@ -14,3 +14,4 @@ This documents cover various software engineering topics and patterns often foun
 - [Kafka Notes](./docs/kafka-notes.md)
 - [Python Notes](./docs/python-cheat-sheet.md)
 - [Oath2 vs. Basic Auth - Security Comparison](./docs/oath2basic.md)
+- [Advanced Data Analysis with ChatGPT](./docs/advancedchatgptdataanalysis.md)
